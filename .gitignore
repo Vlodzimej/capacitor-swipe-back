@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+package-lock.json.*
+npm-debug.log*
+.idea
+.vscode
+ios/Plugin.xcworkspace/xcuserdata
+ios/Plugin.xcodeproj/project.xcworkspace/xcuserdata
