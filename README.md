@@ -42,7 +42,7 @@ Disables `allowsBackForwardNavigationGestures` on iOS.
 
 Publish notes:
 - Bump `version` in `package.json` before releasing.
-- Create a matching git tag for CocoaPods consumers (tag name should equal the package version).
+- Create a matching git tag for CocoaPods consumers (tag name should equal the package version). Pod name is `NotnotsamuelCapacitorSwipeBack`.
 - CI is configured to publish to npm on pushes to `main` (requires `NPM_TOKEN` secret).
 
 ## Credits
