@@ -1,5 +1,5 @@
 {
-  "name": "@notnotsamuel/capacitor-swipe-back",
+  "name": "@scloud/capacitor-swipe-back",
   "version": "3.0.2",
   "description": "Capacitor swipe back plugin. For Capacitor v3, v4 (0.0.3), v5 (1.0.0), v6 (2.0.0) and v7 (3.0.0). For v2 use original plugin: https://github.com/diiiary/capacitor-plugin-ios-swipe-back",
   "main": "dist/plugin.cjs.js",
@@ -11,16 +11,16 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "NotnotsamuelCapacitorSwipeBack.podspec"
+    "ScloudCapacitorSwipeBack.podspec"
   ],
-  "author": "notnotsamuel",
+  "author": "scloud",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/notnotsamuel/capacitor-swipe-back.git"
+    "url": "git+https://github.com/scloud/capacitor-swipe-back.git"
   },
   "bugs": {
-    "url": "https://github.com/notnotsamuel/capacitor-swipe-back/issues"
+    "url": "https://github.com/scloud/capacitor-swipe-back/issues"
   },
   "keywords": [
     "capacitor",

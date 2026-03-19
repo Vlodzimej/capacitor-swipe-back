@@ -1,50 +1,45 @@
 # Capacitor Swipe Back
 
-A minimal Capacitor plugin that toggles the iOS WebView swipe-back gesture (`allowsBackForwardNavigationGestures`). Android and web implementations resolve with a status but do not change navigation behavior.
+Минималистичный плагин для Capacitor, который переключает жест смахивания назад в iOS WebView (`allowsBackForwardNavigationGestures`). Реализации для Android и веба возвращают статус, но не изменяют поведение навигации.
 
-- Supports Capacitor v3–v7.
-- Intended for iOS; Android/web are no-ops that still resolve successfully.
-- Successor to the unmaintained `capacitor-plugin-ios-swipe-back` (v2 and below).
+- Поддерживает Capacitor v8 (обновлено)
+- Предназначен для iOS; Android/веб являются "пустышками", которые успешно выполняются.
+- Преемник неподдерживаемого плагина `capacitor-plugin-ios-swipe-back` (версии v2 и ниже).
 
-## Installation
+## Установка
 
 ```bash
-npm install @notnotsamuel/capacitor-swipe-back
+npm install @scloud/capacitor-swipe-back
 npx cap sync ios
 ```
 
-## Usage
+## Использование
 
 ```ts
-import { CapacitorSwipeBackPlugin } from '@notnotsamuel/capacitor-swipe-back';
+import { CapacitorSwipeBackPlugin } from '@scloud/capacitor-swipe-back';
 
-// Enable swipe-back for the current WebView
+// Включить жест смахивания назад для текущего WebView
 await CapacitorSwipeBackPlugin.enable();
 
-// Disable swipe-back when you need stricter navigation (e.g., auth screens)
+// Отключить жест, когда нужна более строгая навигация (например, экраны авторизации)
 await CapacitorSwipeBackPlugin.disable();
 ```
 
-On Android and web, the plugin resolves with the same payload without changing navigation.
+На Android и вебе плагин возвращает те же данные без изменения навигации.
 
 ## API
 
 ### `enable() => Promise<{ status: 'enable' }>`
-Enables `allowsBackForwardNavigationGestures` on iOS.
+Включает allowsBackForwardNavigationGestures на iOS.
 
 ### `disable() => Promise<{ status: 'disable' }>`
-Disables `allowsBackForwardNavigationGestures` on iOS.
+Отключает allowsBackForwardNavigationGestures на iOS.
 
-## Development
+## Разработка
 
-- `npm run build` – generate typings/docs JSON, compile TypeScript, and bundle.
-- `npm run lint` – format and lint TypeScript/Swift/Java.
+- `npm run build` – генерация типов/документации JSON, компиляция TypeScript и сборка.
+- `npm run lint` – форматирование и проверка TypeScript/Swift/Java кода.
 
-Publish notes:
-- Bump `version` in `package.json` before releasing.
-- Create a matching git tag for CocoaPods consumers (tag name should equal the package version). Pod name is `NotnotsamuelCapacitorSwipeBack`.
-- CI is configured to publish to npm on pushes to `main` (requires `NPM_TOKEN` secret).
+## Благодарности
 
-## Credits
-
-Originally based on the community plugin by Ales Mraz (`diiiary/capacitor-plugin-ios-swipe-back`).
+Основано на плагинах от Samuel Compagnon (notnotsamuel/capacitor-swipe-back) и Ales Mraz (diiiary/capacitor-plugin-ios-swipe-back).

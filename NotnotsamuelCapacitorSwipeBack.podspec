@@ -4,7 +4,7 @@ package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 repo_url = package['repository']['url'].sub('git+', '')
 
 Pod::Spec.new do |s|
-  s.name = 'NotnotsamuelCapacitorSwipeBack'
+  s.name = 'ScloudCapacitorSwipeBack'
   s.version = package['version']
   s.summary = package['description']
   s.license = package['license']
